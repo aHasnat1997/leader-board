@@ -50,7 +50,7 @@ nav {
   justify-content: space-between;
 }
 
-.logo a{
+.logo a {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -81,6 +81,11 @@ nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
+  transition: 1s;
+}
+
+nav ul li a:hover {
+  color: #120064;
 }
 
 /* Header Section */
@@ -164,10 +169,11 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .course {
-  width: 224px;
+  width: 324px;
   padding: 13px 11px;
   border-radius: 5px;
   box-shadow: 5px 5px 10px #e6e6e6;
@@ -238,6 +244,58 @@ hr {
 
 /* Responsive for Small Device */
 @media screen and (max-width: 576px) {
-  
+
+  .contener,
+  nav {
+    width: 90%;
+  }
+
+  nav,
+  .player,
+  .blog,
+  .courses {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .courses {
+    gap: 20px;
+  }
 }
+
 /* Responsive for Small Device */
+
+/* Responsive for medium Device */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+
+  .contener,
+  nav {
+    width: 90%;
+  }
+
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blogs {
+    grid-row-gap: 30px;
+  }
+
+  .blog {
+    flex-direction: column;
+  }
+
+  .courses {
+    flex-wrap: wrap;
+  }
+}
+
+/* Responsive for medium Device */
